@@ -1,27 +1,28 @@
-#include <iostream>
-#include <vector>
-#include <string>
-#include <algorithm>
 
-int main() {
-    // Preguntar cantidad de objetos en lista de compra:
-    float cantidadProductos;
-    while (true) {
-        std::cout << "¿Cuántos productos deseas comprar? ";
-        std::cin >> cantidadProductos;
-        if (cantidadProductos > 0) {
-            break;
-        } else {
-            std::cout << "Por favor introduzca el número de productos a comprar" << std::endl;
-            continue;
+    include <iostream>
+    include <vector>
+    include <string>
+    include <algorithm>
+
+    int main() {
+        // Preguntar cantidad de objetos en lista de compra:
+        float cantidadProductos;
+        while (true) {
+            std::cout << "¿Cuántos productos deseas comprar? ";
+            std::cin >> cantidadProductos;
+            if (cantidadProductos > 0) {
+                break;
+            } else {
+                std::cout << "Por favor introduzca el número de productos a comprar" << std::endl;
+                continue;
+            }
         }
-    }
-
+    
     // Crear lista de la compra
     std::vector<std::string> listaCompraProductos;
     std::vector<float> listaCompraPrecios;
     int index = 0;
-
+    
     // Preguntar por los productos y sus precios
     for (int i = 0; i < static_cast<int>(cantidadProductos); ++i) {
         std::string productoAñadido;
